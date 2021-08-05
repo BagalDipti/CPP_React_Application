@@ -3,6 +3,7 @@ import App from './App';
 import ReactDOM from 'react-dom';
 import Header from './Header' ;
 import { render, screen } from '@testing-library/react';
+import Apis from './Apis';
 
 
 it('renders without crashing', () => {
@@ -18,10 +19,6 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(Grid);
 });
 
-it('renders message', () => {
-  render(<App />);
-  expect(screen.getByText('Learn React')).toBeInTheDocument();
-});
 
 /*test(" deleted the record it is given", () => {
   const startState = [{ id: 1, done: false }];
@@ -38,6 +35,20 @@ describe("App Component Testing", () => {
 });
 
 
+
+it("Api testing", async function () {
+    const response = new Apis();
+    console.warn( await response.api());
+
+    expect("import Apis from './Apis';
+
+
+it("Api testing", async function () {
+    const response = new Apis();
+    console.warn( await response.api());
+
+    expect("Employee Details").toEqual("Employee Details")
+});
 
 
 
